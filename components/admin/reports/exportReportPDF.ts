@@ -72,7 +72,9 @@ export async function exportReportPDF(tab: string, data: ReportData) {
         headStyles: { fillColor: [92, 143, 43] },
         margin: { left: 14 },
       });
-      y = (doc as unknown as Record<string, number>).lastAutoTable?.finalY + 8 || y + 30;
+      const finalY = (doc as any).lastAutoTable?.finalY;
+
+y = finalY ? finalY + 8 : y + 30;
     }
     doc.save(`resumen_ecoforge_${date}.pdf`);
 
