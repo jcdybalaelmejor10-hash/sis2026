@@ -355,7 +355,7 @@ function EarningsTab({ data }: { data: ReportData }) {
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="name" tick={{ fontSize: 11 }} />
               <YAxis />
-              <Tooltip formatter={(v: number | string | undefined) => Bs ${Number(v ?? 0).toFixed(2)}} />
+              <Tooltip formatter={(v: number | string | undefined) => `Bs ${Number(v ?? 0).toFixed(2)}`} />
               <Bar dataKey="value" fill="#10B981" radius={[4, 4, 0, 0]} />
             </BarChart>
           </ResponsiveContainer>
