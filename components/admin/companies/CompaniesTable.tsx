@@ -4,6 +4,7 @@ interface Company {
   id: number;
   name: string;
   nit: string;
+  address?: string;
   email: string;
   phone: string;
   status: string;
